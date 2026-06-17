@@ -11,7 +11,7 @@ primary_contact:
 
 
 github_repo: "https://github.com/Arunkarthik134630/redrob-ranker"
-sandbox_link: "https://huggingface.co/spaces/YOUR_USERNAME/redrob-ranker"
+sandbox_link: https://redrob-ranker-chh8ntpn6qv5rmvcrlisb9.streamlit.app/
 reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
 
 compute:
