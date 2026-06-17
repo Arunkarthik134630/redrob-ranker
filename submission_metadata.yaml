@@ -1,0 +1,55 @@
+# Redrob Hackathon — Submission Metadata
+# Fill in your actual team details before submitting
+
+team_name: "your-team-name-here"
+
+primary_contact:
+  name: "Your Name"
+  email: "your@email.com"
+  phone: "+91-XXXXXXXXXX"
+
+team_members:
+  - name: "Your Name"
+    email: "your@email.com"
+    role: "Team Lead / ML Engineer"
+
+github_repo: "https://github.com/YOUR_USERNAME/redrob-ranker"
+sandbox_link: "https://huggingface.co/spaces/YOUR_USERNAME/redrob-ranker"
+reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
+
+compute:
+  platform: "Local CPU machine"
+  cpu_cores: 4
+  ram_gb: 16
+  python_version: "3.11"
+  os: "Linux / macOS / Windows"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+ai_tools_used:
+  - "Claude"
+
+ai_usage_summary: |
+  Used Claude for architecture discussion and code review.
+  All scoring logic, feature engineering, and system design
+  were engineered by the team. No candidate data was fed to
+  any LLM during the ranking process.
+
+methodology_summary: |
+  Hybrid structured ranker using 7 feature groups with evidence-grounded scoring.
+  Primary signal: title+career trajectory (0.30 weight) prevents keyword stuffers
+  from ranking high — an HR Manager with AI skills scores near-zero on this
+  dimension. Skills scored with proficiency×duration×endorsement trust model
+  (skills claimed with 0 months = 0.1× trust). Behavioral signals applied as
+  hard multipliers: >180d inactive = ×0.70, RRR<10% = ×0.85. Honeypot detection
+  flags impossible profiles (expert skills with 0 duration, impossible YOE gaps).
+  Zero external dependencies, ~31s for 100K candidates on CPU, ~150MB peak RAM.
+
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true
