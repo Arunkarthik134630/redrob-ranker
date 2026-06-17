@@ -1,19 +1,16 @@
 # Redrob Hackathon — Submission Metadata
 # Fill in your actual team details before submitting
 
-team_name: "your-team-name-here"
+team_name: "Bhairav's Team"
 
 primary_contact:
-  name: "Your Name"
-  email: "your@email.com"
-  phone: "+91-XXXXXXXXXX"
+  name: "S.Bhairava Arun Karthtik"
+  email: "arunkarthik143143@gmail.com"
+  phone: "+91-6301803583"
 
-team_members:
-  - name: "Your Name"
-    email: "your@email.com"
-    role: "Team Lead / ML Engineer"
 
-github_repo: "https://github.com/YOUR_USERNAME/redrob-ranker"
+
+github_repo: "https://github.com/Arunkarthik134630/redrob-ranker"
 sandbox_link: "https://huggingface.co/spaces/YOUR_USERNAME/redrob-ranker"
 reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
 
