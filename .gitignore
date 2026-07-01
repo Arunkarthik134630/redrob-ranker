@@ -7,3 +7,15 @@ __pycache__/
 candidates.jsonl
 candidates.jsonl.gz
 *.zip
+# Temporary development files
+fix_rank.py
+fix_submission.py
+patch2.py
+patch_final.py
+
+# Outputs
+outputs/
+
+# Large datasets
+*.jsonl
+candidates.jsonl
